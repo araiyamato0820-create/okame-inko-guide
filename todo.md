@@ -11,4 +11,4 @@
 ## Google AdSense 導入
 
 - [x] サイト全体で読み込むAdSenseスクリプトをHTMLへ追加する。
-- [ ] ビルドを検証し、GitHub Pagesへ再公開する。
+- [x] ビルドを検証し、GitHub Pagesへ再公開する。
