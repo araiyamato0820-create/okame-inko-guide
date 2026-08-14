@@ -7,3 +7,8 @@
 - [x] GitHub Pagesを有効化し、公開URLを確認する。
 
 公開URL: https://araiyamato0820-create.github.io/okame-inko-guide/
+
+## Google AdSense 導入
+
+- [x] サイト全体で読み込むAdSenseスクリプトをHTMLへ追加する。
+- [ ] ビルドを検証し、GitHub Pagesへ再公開する。
