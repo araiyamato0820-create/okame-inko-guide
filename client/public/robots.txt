@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://araiyamato0820-create.github.io/okame-inko-guide/sitemap.xml
