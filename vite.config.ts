@@ -206,6 +206,8 @@ function vitePluginStorageProxy(): Plugin {
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
 
 export default defineConfig({
+  // GitHub Actions build only: serve all generated paths below the repository name.
+  base: process.env.GITHUB_ACTIONS ? "/okame-inko-guide/" : "/",
   plugins,
   resolve: {
     alias: {

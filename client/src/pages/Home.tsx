@@ -19,6 +19,14 @@ import {
   X,
 } from "lucide-react";
 
+const pageAsset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
+const assets = {
+  hero: pageAsset("okame-hero.webp"),
+  dailyCare: pageAsset("okame-daily-care.webp"),
+  homeSetup: pageAsset("okame-home-setup.webp"),
+  logo: pageAsset("okame-logo.webp"),
+};
+
 const guideItems = [
   {
     number: "01",
@@ -63,7 +71,7 @@ export default function Home() {
     <div className="site-shell">
       <header className="site-header">
         <a className="brand" href="#top" aria-label="オカメインコ暮らしガイドのトップへ">
-          <img src="/manus-storage/okame-logo_b37759c1.png" alt="冠羽のあるオカメインコを表すロゴ" />
+          <img src={assets.logo} alt="冠羽のあるオカメインコを表すロゴ" />
           <span>
             <strong>オカメインコ</strong>
             <small>暮らしガイド</small>
@@ -109,7 +117,7 @@ export default function Home() {
 
           <div className="hero-visual reveal-up delay-1">
             <div className="hero-arch">
-              <img src="/manus-storage/okame-hero_20e767a3.jpg" alt="やわらかな日差しの中、止まり木にとまるオカメインコ" />
+              <img src={assets.hero} alt="やわらかな日差しの中、止まり木にとまるオカメインコ" />
             </div>
             <aside className="observation-note">
               <p className="note-label">OBSERVATION NOTE</p>
@@ -155,7 +163,7 @@ export default function Home() {
 
         <section id="prepare" className="prepare-section">
           <div className="prepare-image reveal-up">
-            <img src="/manus-storage/okame-home-setup_4eddc054.jpg" alt="日差しの入る室内に整えられた、オカメインコのためのケージ周り" />
+            <img src={assets.homeSetup} alt="日差しの入る室内に整えられた、オカメインコのためのケージ周り" />
             <div className="image-caption"><span>PREPARE</span><span>02 / 03</span></div>
           </div>
           <div className="prepare-copy reveal-up delay-1">
@@ -188,7 +196,7 @@ export default function Home() {
               <button className="text-link button-link" type="button" onClick={showNotice}>掲載ポリシーを確認 <ArrowUpRight size={16} /></button>
             </article>
             <article className="daily-card reveal-up delay-2">
-              <img src="/manus-storage/okame-daily-care_eb3059ec.jpg" alt="木の止まり木で落ち着いて過ごすオカメインコ" />
+              <img src={assets.dailyCare} alt="木の止まり木で落ち着いて過ごすオカメインコ" />
               <div className="daily-overlay">
                 <span>DAILY CARE</span>
                 <p>毎日に合う道具は、<br />毎日の観察から。</p>
@@ -204,7 +212,7 @@ export default function Home() {
         </section>
 
         <section id="about" className="about-section">
-          <div className="about-mark"><img src="/manus-storage/okame-logo_b37759c1.png" alt="" /></div>
+          <div className="about-mark"><img src={assets.logo} alt="" /></div>
           <p className="eyebrow">ABOUT THIS LITTLE GUIDE</p>
           <h2>知識を急がず、<br /><em>一緒に暮らす時間を増やす。</em></h2>
           <p>オカメインコ暮らしガイドは、飼育の基本と用品選びの考え方を、暮らしの目線でまとめる個人向けの案内所です。特定の製品を紹介する場合は、その関係性をわかりやすく表示します。</p>
@@ -214,7 +222,7 @@ export default function Home() {
 
       <footer className="site-footer">
         <a className="brand brand-footer" href="#top">
-          <img src="/manus-storage/okame-logo_b37759c1.png" alt="" />
+          <img src={assets.logo} alt="" />
           <span><strong>オカメインコ</strong><small>暮らしガイド</small></span>
         </a>
         <p>OBSERVE GENTLY, LIVE TOGETHER.</p>
